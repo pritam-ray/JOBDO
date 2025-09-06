@@ -228,7 +228,33 @@ VITE_DEBUG_MODE=false
 
 ## 🚀 **Deployment**
 
-### **Vercel (Recommended)**
+### **Netlify (Current)**
+🌐 **Live Site**: https://app.netlify.com/projects/job-do/overview
+
+```bash
+# Build the project
+npm run build
+
+# Deploy to Netlify (auto-deploy on push to main)
+# 1. Connect GitHub repo to Netlify
+# 2. Set build command: npm run build
+# 3. Set publish directory: dist
+# 4. Add environment variables in Netlify dashboard
+```
+
+### **Quick Deploy to Netlify**
+1. Go to: https://app.netlify.com/projects/job-do/overview
+2. Connect GitHub repository: `pritam-ray/JOBDO`
+3. Build settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+4. Environment variables:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
+
+### **Alternative Deployments**
+
+#### **Vercel**
 ```bash
 # Install Vercel CLI
 npm i -g vercel
@@ -237,15 +263,7 @@ npm i -g vercel
 vercel --prod
 ```
 
-### **Netlify**
-```bash
-# Build the project
-npm run build
-
-# Deploy dist/ folder to Netlify
-```
-
-### **Self-Hosted**
+#### **Self-Hosted**
 ```bash
 # Build for production
 npm run build
