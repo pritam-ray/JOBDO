@@ -36,6 +36,53 @@
       "verified": true
     },
     {
+      "id": "jaipur-real-1",
+      "name": "SS Soft Solutions Pvt Ltd",
+      "address": "Vaishali Nagar, Jaipur, Rajasthan 302021",
+      "phone": "+91-141-404-4727",
+      "email": "info@sssoftsolutions.com",
+      "website": "https://www.sssoftsolutions.com",
+      "category": "Software Development",
+      "city": "jaipur",
+      "skills": ["web development", "app development", "software"],
+      "verified": true
+    },
+    {
+      "id": "jaipur-real-2",
+      "name": "Ananta Computers",
+      "address": "Gopalpura Bypass, Jaipur, Rajasthan 302018",
+      "phone": "+91-141-402-6000",
+      "email": "careers@anantacomputers.com",
+      "category": "IT Hardware & Electronics",
+      "city": "jaipur",
+      "skills": ["electronics", "hardware", "computer"],
+      "verified": true
+    },
+    {
+      "id": "jaipur-real-3",
+      "name": "RSCIT Jaipur Centre",
+      "address": "Rajasthan State Certificate in Information Technology, Jaipur",
+      "phone": "+91-141-271-1964",
+      "email": "rscit@vmou.ac.in",
+      "website": "https://rkcl.vmou.ac.in",
+      "category": "IT Training & Education",
+      "city": "jaipur",
+      "skills": ["data science", "cybersecurity", "web development"],
+      "verified": true
+    },
+    {
+      "id": "jaipur-real-4",
+      "name": "Jaipur Engineering College & Research Centre",
+      "address": "Kukas, Jaipur, Rajasthan 302028",
+      "phone": "+91-141-277-0058",
+      "email": "placement@jecjaipur.ac.in",
+      "website": "https://www.jecjaipurtech.ac.in",
+      "category": "Engineering & Electronics",
+      "city": "jaipur",
+      "skills": ["electronics", "engineering", "data science"],
+      "verified": true
+    },
+    {
       "id": "delhi-cyber-1",
       "name": "Delhi Cybersecurity Solutions",
       "address": "Cyber City, Gurugram, Haryana 122002",
@@ -55,6 +102,39 @@
       "category": "Financial Technology",
       "city": "mumbai",
       "skills": ["finance", "blockchain", "data science"],
+      "verified": true
+    },
+    {
+      "id": "bangalore-ai-1",
+      "name": "Bangalore AI Research Labs",
+      "address": "Electronic City, Bangalore, Karnataka 560100",
+      "phone": "+91-80-400-5678",
+      "email": "careers@blrailabs.com",
+      "category": "AI & Machine Learning",
+      "city": "bangalore",
+      "skills": ["ai/ml", "data science", "machine learning"],
+      "verified": true
+    },
+    {
+      "id": "pune-it-1",
+      "name": "Pune Tech Solutions",
+      "address": "Hinjewadi IT Park, Pune, Maharashtra 411057",
+      "phone": "+91-20-678-9012",
+      "email": "hr@punetech.com",
+      "category": "IT Services",
+      "city": "pune",
+      "skills": ["web development", "cybersecurity", "cloud computing"],
+      "verified": true
+    },
+    {
+      "id": "hyderabad-data-1",
+      "name": "Hyderabad Data Analytics",
+      "address": "HITEC City, Hyderabad, Telangana 500081",
+      "phone": "+91-40-789-0123",
+      "email": "jobs@hyddata.com",
+      "category": "Data Science & Analytics",
+      "city": "hyderabad",
+      "skills": ["data science", "analytics", "big data"],
       "verified": true
     }
   ]
