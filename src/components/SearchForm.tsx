@@ -86,7 +86,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch, isLoading }) =
 
   const onSubmit = async (data: FormData) => {
     if (selectedSkills.length === 0) {
-      alert('Please select at least one skill or interest area.');
+      alert('Please select at least one skill or interest area to search on Job-Do.');
       return;
     }
 

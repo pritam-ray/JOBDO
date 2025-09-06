@@ -18,17 +18,17 @@ export const Header: React.FC = () => {
           </div>
           
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-            InternFinder
+            Job-Do
           </h1>
           
           <p className="text-xl sm:text-2xl font-light mb-6 text-blue-100">
-            Discover Local Internship Opportunities
+            Discover Job & Internship Opportunities Across India
           </p>
           
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-blue-50 leading-relaxed">
-              Find companies in your area that match your skills and interests. 
-              Get comprehensive contact information and export results for easy outreach.
+              Find real companies across India that match your skills and interests. 
+              Get comprehensive contact information from 24+ sources and export results for easy outreach.
             </p>
           </div>
 
@@ -36,20 +36,20 @@ export const Header: React.FC = () => {
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white bg-opacity-10 rounded-lg p-4">
               <MapPin className="w-8 h-8 mx-auto mb-2" />
-              <h3 className="font-semibold mb-1">Location-Based Search</h3>
-              <p className="text-sm text-blue-100">Find companies within your preferred radius</p>
+              <h3 className="font-semibold mb-1">India-Wide Search</h3>
+              <p className="text-sm text-blue-100">Find companies across all Indian cities and tech hubs</p>
             </div>
             
             <div className="bg-white bg-opacity-10 rounded-lg p-4">
               <Building2 className="w-8 h-8 mx-auto mb-2" />
-              <h3 className="font-semibold mb-1">Comprehensive Data</h3>
-              <p className="text-sm text-blue-100">Get contact info, ratings, and business details</p>
+              <h3 className="font-semibold mb-1">Real Company Data</h3>
+              <p className="text-sm text-blue-100">Get contact info from 24+ sources with zero mock data</p>
             </div>
             
             <div className="bg-white bg-opacity-10 rounded-lg p-4">
               <Search className="w-8 h-8 mx-auto mb-2" />
-              <h3 className="font-semibold mb-1">Export & Save</h3>
-              <p className="text-sm text-blue-100">Download results in Excel or CSV format</p>
+              <h3 className="font-semibold mb-1">Smart Job Search</h3>
+              <p className="text-sm text-blue-100">AI-powered matching with Indian job portals & directories</p>
             </div>
           </div>
         </div>

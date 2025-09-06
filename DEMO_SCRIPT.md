@@ -1,4 +1,4 @@
-# 🚀 JOBDO Demo Script
+# 🚀 Job-Do Demo Script
 
 ## Test the Enhanced Indian Job Search
 
@@ -128,7 +128,7 @@ Expected: Mix of government, private, and consulting firms
 - Generic/mock company data
 - Poor tier-2 city coverage
 
-**JOBDO Experience:**
+**Job-Do Experience:**
 - 5-50 real companies per search
 - 24+ search sources simultaneously
 - Actual contact information

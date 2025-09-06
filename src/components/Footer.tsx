@@ -8,10 +8,10 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4">InternFinder</h3>
+            <h3 className="text-xl font-bold mb-4">Job-Do</h3>
             <p className="text-gray-300 leading-relaxed">
-              Helping students and job seekers discover local internship opportunities 
-              by connecting them with companies in their area.
+              Empowering job seekers across India to discover amazing career opportunities 
+              through comprehensive job search and local business connections.
             </p>
           </div>
 
@@ -19,11 +19,11 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Features</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>• Location-based company search</li>
+              <li>• India-focused job search</li>
               <li>• Skills-based filtering</li>
-              <li>• Comprehensive company data</li>
+              <li>• Multiple job portals integration</li>
               <li>• Excel & CSV export</li>
-              <li>• Google Maps integration</li>
+              <li>• Location-based search</li>
             </ul>
           </div>
 
@@ -33,15 +33,15 @@ export const Footer: React.FC = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>support@internfinder.com</span>
+                <span>support@job-do.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <Globe className="w-4 h-4" />
-                <span>www.internfinder.com</span>
+                <span>www.job-do.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <Github className="w-4 h-4" />
-                <span>github.com/internfinder</span>
+                <span>github.com/pritam-ray/JOBDO</span>
               </div>
             </div>
           </div>
@@ -49,10 +49,10 @@ export const Footer: React.FC = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400 flex items-center justify-center gap-2">
-            Made with <Heart className="w-4 h-4 text-red-500" fill="currentColor" /> for aspiring interns
+            Made with <Heart className="w-4 h-4 text-red-500" fill="currentColor" /> for job seekers in India
           </p>
           <p className="text-gray-500 text-sm mt-2">
-            © 2024 InternFinder. All rights reserved.
+            © 2024 Job-Do. All rights reserved.
           </p>
         </div>
       </div>

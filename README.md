@@ -1,6 +1,6 @@
-# JOBDO - Comprehensive Indian Job & Internship Finder 🇮🇳
+# Job-Do - Comprehensive Indian Job & Internship Finder 🇮🇳
 
-JOBDO is a powerful, India-focused job and internship discovery platform that helps students and professionals find real opportunities across India. Unlike other platforms, JOBDO uses **comprehensive web scraping** and **24+ search sources** to provide actual company data with real contact information.
+Job-Do is a powerful, India-focused job and internship discovery platform that helps students and professionals find real opportunities across India. Unlike other platforms, Job-Do uses **comprehensive web scraping** and **24+ search sources** to provide actual company data with real contact information.
 
 ## 🚀 Key Features
 
@@ -30,7 +30,7 @@ JOBDO is a powerful, India-focused job and internship discovery platform that he
 - **Advanced Deduplication**: Intelligent merging of duplicate companies
 - **Error Handling**: Graceful degradation when individual sources fail
 
-## 🌟 **What Makes JOBDO Different**
+## 🌟 **What Makes Job-Do Different**
 
 ### ❌ **Before**: Traditional job search problems
 - Limited to single job portals
@@ -39,7 +39,7 @@ JOBDO is a powerful, India-focused job and internship discovery platform that he
 - Generic results not relevant to skills
 - "No companies found" for many Indian locations
 
-### ✅ **After**: JOBDO's comprehensive approach
+### ✅ **After**: Job-Do's comprehensive approach
 - **10-50 real companies** for major Indian cities
 - **5-20 companies** for tier-2 cities like Jaipur, Indore, Kochi
 - **Actual contact information** for direct outreach
@@ -72,7 +72,7 @@ JOBDO is a powerful, India-focused job and internship discovery platform that he
 ```bash
 # Clone the repository
 git clone https://github.com/pritam-ray/JOBDO.git
-cd JOBDO
+cd Job-Do
 
 # Install dependencies
 npm install
@@ -582,4 +582,4 @@ MIT License - see LICENSE file for details
 
 ## Support
 
-For support or questions, please contact support@internfinder.com or create an issue in the repository.
+For support or questions, please contact support@job-do.com or create an issue in the repository.
