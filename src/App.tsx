@@ -4,7 +4,7 @@ import { SearchForm } from './components/SearchForm';
 import { SearchResults } from './components/SearchResults';
 import { Footer } from './components/Footer';
 import { Company, SearchParams } from './types';
-import { searchCompanies } from './services/placesApi';
+import { IndianJobSearchService } from './services/indianJobSearchService';
 import { saveSearchResult } from './services/database';
 
 function App() {
@@ -37,7 +37,11 @@ function App() {
     setLastSearchParams(searchParams);
 
     try {
-      const results = await searchCompanies(searchParams);
+      const results = await IndianJobSearchService.searchIndianCompaniesAndJobs(
+        searchParams.location,
+        searchParams.skills,
+        searchParams.coordinates
+      );
       setCompanies(results);
 
       // Save results to database (optional, doesn't block UI if it fails)
