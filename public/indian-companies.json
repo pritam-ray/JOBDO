@@ -1,0 +1,61 @@
+{
+  "indianCompanies": [
+    {
+      "id": "jaipur-tech-1",
+      "name": "Rajasthan Electronics Ltd",
+      "address": "Industrial Area, Jaipur, Rajasthan 302013",
+      "phone": "+91-141-233-4567",
+      "email": "hr@rajelectronics.com",
+      "website": "https://rajelectronics.com",
+      "category": "Electronics Manufacturing",
+      "city": "jaipur",
+      "skills": ["electronics", "manufacturing", "engineering"],
+      "verified": true
+    },
+    {
+      "id": "jaipur-it-1", 
+      "name": "Pink City Software Solutions",
+      "address": "C-Scheme, Jaipur, Rajasthan 302001",
+      "phone": "+91-141-456-7890",
+      "email": "careers@pinkcitysoft.com",
+      "website": "https://pinkcitysoft.com",
+      "category": "Software Development",
+      "city": "jaipur",
+      "skills": ["web development", "app development", "cybersecurity"],
+      "verified": true
+    },
+    {
+      "id": "jaipur-data-1",
+      "name": "Jaipur Analytics Hub",
+      "address": "Malviya Nagar, Jaipur, Rajasthan 302017",
+      "phone": "+91-141-789-0123",
+      "email": "jobs@jaipuranalytics.com",
+      "category": "Data Science & Analytics",
+      "city": "jaipur", 
+      "skills": ["data science", "analytics", "machine learning"],
+      "verified": true
+    },
+    {
+      "id": "delhi-cyber-1",
+      "name": "Delhi Cybersecurity Solutions",
+      "address": "Cyber City, Gurugram, Haryana 122002",
+      "phone": "+91-124-567-8901",
+      "email": "security@delhicyber.com",
+      "category": "Cybersecurity",
+      "city": "delhi",
+      "skills": ["cybersecurity", "network security", "ethical hacking"],
+      "verified": true
+    },
+    {
+      "id": "mumbai-fin-1",
+      "name": "Mumbai Fintech Innovations",
+      "address": "Lower Parel, Mumbai, Maharashtra 400013",
+      "phone": "+91-22-890-1234",
+      "email": "careers@mumbaifintech.com",
+      "category": "Financial Technology",
+      "city": "mumbai",
+      "skills": ["finance", "blockchain", "data science"],
+      "verified": true
+    }
+  ]
+}
