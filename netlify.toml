@@ -11,6 +11,12 @@
 [build.environment]
   # Node.js version
   NODE_VERSION = "18"
+  # Mark as Netlify environment for conditional base path
+  NETLIFY = "true"
+  # Production environment
+  VITE_APP_ENV = "production"
+  # Netlify URL will be auto-set by Netlify
+  # VITE_APP_URL will be set automatically by Netlify
 
 # Redirect rules for SPA (Single Page Application)
 [[redirects]]
@@ -34,6 +40,8 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Environment variables (will need to be set in Netlify dashboard)
-# VITE_SUPABASE_URL = "your_supabase_url"
-# VITE_SUPABASE_ANON_KEY = "your_supabase_anon_key"
+# Environment variables - Set these in Netlify Dashboard > Site Settings > Environment Variables
+# Required variables:
+# VITE_SUPABASE_URL = "your_supabase_url_here"
+# VITE_SUPABASE_ANON_KEY = "your_supabase_anon_key_here"  
+# VITE_GOOGLE_MAPS_API_KEY = "your_google_maps_api_key_here"

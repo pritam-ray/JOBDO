@@ -72,7 +72,7 @@ Job-Do is a powerful, India-focused job and internship discovery platform that h
 ```bash
 # Clone the repository
 git clone https://github.com/pritam-ray/JOBDO.git
-cd Job-Do
+cd JOBDO
 
 # Install dependencies
 npm install
@@ -81,22 +81,55 @@ npm install
 cp .env.example .env
 ```
 
-### **2. Configure Supabase**
-1. Create a project at [supabase.com](https://supabase.com)
-2. Get your project URL and anon key
-3. Update `.env` file:
+### **2. Environment Variables**
+Create a `.env` file in the project root with the following variables:
+
 ```env
+# Supabase Configuration (Required for database features)
 VITE_SUPABASE_URL=your_supabase_project_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+# Google Maps API (Optional - for enhanced location features)
+VITE_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+
+# App Configuration
+VITE_APP_ENV=development
+VITE_APP_URL=http://localhost:5173
 ```
 
-### **3. Run the Application**
+#### **Getting API Keys:**
+
+**Supabase Setup:**
+1. Visit [supabase.com](https://supabase.com) and create a free account
+2. Create a new project
+3. Go to Settings > API
+4. Copy the `Project URL` and `anon public` key
+5. Add them to your `.env` file
+
+**Google Maps API (Optional):**
+1. Visit [Google Cloud Console](https://console.cloud.google.com)
+2. Create a new project or select existing
+3. Enable Google Maps JavaScript API
+4. Create credentials (API Key)
+5. Add the key to your `.env` file
+
+### **3. Configure Supabase Database**
+Run the migration file to set up the database schema:
+```sql
+-- Copy and run the SQL from supabase/migrations/20250720134841_white_lake.sql
+-- in your Supabase SQL editor
+```
+
+### **4. Run the Application**
 ```bash
 # Development server
 npm run dev
 
 # Production build
 npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
 ```
 
 Visit `http://localhost:5173` and start searching!
@@ -228,29 +261,57 @@ VITE_DEBUG_MODE=false
 
 ## 🚀 **Deployment**
 
-### **Netlify (Current)**
-🌐 **Live Site**: https://app.netlify.com/projects/job-do/overview
+### **GitHub Pages (Automated)**
+🌐 **Live Site**: https://pritam-ray.github.io/JOBDO/
 
+**Automatic Deployment:**
+- Deploys automatically on push to `main` branch
+- Uses GitHub Actions for CI/CD
+- Environment variables set in GitHub Secrets
+
+**Setup GitHub Secrets:**
+1. Go to your GitHub repository
+2. Settings > Secrets and variables > Actions
+3. Add the following secrets:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
+   - `VITE_GOOGLE_MAPS_API_KEY`
+
+**Manual Deployment:**
+```bash
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+### **Netlify (Current)**
+🌐 **Live Site**: Your Netlify URL
+
+**Automatic Deployment:**
 ```bash
 # Build the project
 npm run build
 
-# Deploy to Netlify (auto-deploy on push to main)
-# 1. Connect GitHub repo to Netlify
-# 2. Set build command: npm run build
-# 3. Set publish directory: dist
-# 4. Add environment variables in Netlify dashboard
+# Auto-deploy on push to main branch
+# Configured via netlify.toml
 ```
 
-### **Quick Deploy to Netlify**
-1. Go to: https://app.netlify.com/projects/job-do/overview
-2. Connect GitHub repository: `pritam-ray/JOBDO`
-3. Build settings:
+**Setup Netlify Environment Variables:**
+1. Go to Netlify Dashboard > Site Settings
+2. Environment Variables section
+3. Add the following variables:
+   - `VITE_SUPABASE_URL` = your_supabase_url
+   - `VITE_SUPABASE_ANON_KEY` = your_supabase_anon_key
+   - `VITE_GOOGLE_MAPS_API_KEY` = your_google_maps_api_key
+   - `NETLIFY` = true (auto-set)
+   - `VITE_APP_ENV` = production
+
+**Quick Deploy to Netlify:**
+1. Connect GitHub repository: `pritam-ray/JOBDO`
+2. Build settings:
    - Build command: `npm run build`
    - Publish directory: `dist`
-4. Environment variables:
-   - `VITE_SUPABASE_URL`
-   - `VITE_SUPABASE_ANON_KEY`
+   - Node version: 18
+3. Environment variables (as listed above)
 
 ### **Alternative Deployments**
 
@@ -259,9 +320,12 @@ npm run build
 # Install Vercel CLI
 npm i -g vercel
 
-# Deploy
+# Deploy with environment variables
 vercel --prod
 ```
+
+**Vercel Environment Variables:**
+Add the same variables in Vercel Dashboard > Settings > Environment Variables
 
 #### **Self-Hosted**
 ```bash
