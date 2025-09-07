@@ -15,6 +15,17 @@ interface Company {
 }
 
 function App() {
+  // Environment variables check
+  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+  const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+  
+  // Debug logging for production
+  console.log('App Environment Check:', {
+    supabaseUrl: supabaseUrl ? 'Configured' : 'Missing',
+    supabaseKey: supabaseKey ? 'Configured' : 'Missing',
+    mode: import.meta.env.MODE
+  });
+
   const [location, setLocation] = useState('');
   const [isDetectingLocation, setIsDetectingLocation] = useState(false);
   const [locationError, setLocationError] = useState('');
@@ -196,6 +207,43 @@ function App() {
     // Don't auto-detect location on mount - let users choose
     // detectLocation();
   }, []);
+
+  // Environment variables check - show error if missing in production
+  if (import.meta.env.PROD && (!supabaseUrl || !supabaseKey)) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-red-50 to-red-100 flex items-center justify-center">
+        <div className="bg-white p-8 rounded-xl shadow-xl max-w-md mx-4">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-red-600 text-2xl">⚠️</span>
+            </div>
+            <h2 className="text-xl font-bold text-gray-900 mb-2">Configuration Error</h2>
+            <p className="text-gray-600 mb-4">
+              Environment variables are missing. Please configure:
+            </p>
+            <div className="text-left text-sm bg-gray-50 p-3 rounded-lg mb-4">
+              <div className="flex justify-between">
+                <span>VITE_SUPABASE_URL:</span>
+                <span className={supabaseUrl ? 'text-green-600' : 'text-red-600'}>
+                  {supabaseUrl ? '✓' : '✗'}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span>VITE_SUPABASE_ANON_KEY:</span>
+                <span className={supabaseKey ? 'text-green-600' : 'text-red-600'}>
+                  {supabaseKey ? '✓' : '✗'}
+                </span>
+              </div>
+            </div>
+            <p className="text-xs text-gray-500">
+              Check your deployment environment variables
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       {/* Premium Header */}
