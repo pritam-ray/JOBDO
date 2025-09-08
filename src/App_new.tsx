@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
-import SearchForm from './components/SearchForm';
+import { SearchForm } from './components/SearchForm';
 import { SearchResults } from './components/SearchResults';
 import { Footer } from './components/Footer';
 import { Company, SearchParams } from './types';
@@ -44,18 +44,15 @@ const App: React.FC = () => {
         .from('companies')
         .select('*');
 
-      // Filter by skills if provided - for now search in description
+      // Filter by skills if provided
       if (searchParams.skills && searchParams.skills.length > 0) {
-        const skillsQuery = searchParams.skills.map(skill => 
-          `description.ilike.%${skill}%`
-        ).join(',');
-        query = query.or(skillsQuery);
+        query = query.overlaps('skills', searchParams.skills);
       }
 
       // Filter by location if provided
       if (searchParams.location && searchParams.location.trim() !== '') {
         const location = searchParams.location.toLowerCase();
-        query = query.or(`city.ilike.%${location}%,state.ilike.%${location}%,address.ilike.%${location}%`);
+        query = query.or(`city.ilike.%${location}%,state.ilike.%${location}%,country.ilike.%${location}%`);
       }
 
       // Execute the query
@@ -69,11 +66,11 @@ const App: React.FC = () => {
       const transformedCompanies: Company[] = (data || []).map(company => ({
         id: company.id,
         name: company.name,
-        address: company.address || `${company.city}, ${company.state}`,
+        address: `${company.city}, ${company.state}, ${company.country}`,
         phone: company.phone,
         email: company.email,
         website: company.website,
-        category: 'Technology', // Default category
+        category: company.industry,
         rating: 4.5, // Default rating
         lat: company.latitude,
         lng: company.longitude,
